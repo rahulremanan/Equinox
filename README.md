@@ -2,12 +2,20 @@
 A set of command line tools for tracking equity markets.
 
 # Equinox Fetch:
+
+Requirements: Ubuntu 17.04 Linux (Untested in other OS environments).
+
 A command line tool to download a list of stocks.
 
-	Launching the application: ./Equinox_Fetch
+Installation:
 
+Just download the Equinox_Fetch file to a convenient folder. Eg: /home/info/Equinox
 
-	Usage: Equinox_Fetch [-h] [--start START_DATE] [--end END_DATE]
+Launching the application: 
+
+Terminal: ./Equinox_Fetch
+
+Usage: Equinox_Fetch [-h] [--start START_DATE] [--end END_DATE]
                      [--stocks [STOCKS [STOCKS ...]]] [--index FILE]
                      [--header HEADER] [--save_dir FILE] [--source SOURCE]
                      [--retries RETRIES] [--workers WORKERS] [--delay DELAY]
@@ -35,10 +43,6 @@ A command line tool to download a list of stocks.
   	--encoding_in   Encoding used for input csv files. eg: utf8, cp1252
   	--encoding_out  Encoding used for output csv files. eg: utf8, cp1252
 
-Example usage using a list file (On Linux): info@project-atlas-reborn:~/dist$ ./Equinox_Fetch --start 2007,01,01 --end 2017,01,01 --index '/home/info/SP500-List.csv' --save_dir '/home/info/data' --source yahoo --workers 4 --delay 10 --retries 30 --encoding_in cp1252 --encoding_out utf8
+Example usage using a list file (On Linux): info@moad:~/Equinox$ ./Equinox_Fetch --start 2007,01,01 --end 2017,01,01 --index '/home/info/SP500-List.csv' --save_dir '/home/info/data' --source yahoo --workers 4 --delay 10 --retries 30 --encoding_in cp1252 --encoding_out utf8
 
-Example usage by entering individual set of stock symbols (On Linux): info@project-atlas-reborn:~/dist$ ./Equinox_Fetch --start 2007,01,01 --end 2017,01,01 --stocks AMD AAPL GGOG INTC MSFT NVDA --save_dir '/home/info/data' --source yahoo --workers 4 --delay 10 --retries 30 --encoding_in cp1252 --encoding_out utf8
-
-Example usage using a list file (On Windows): D:\Downloads\Project_Atlas> ./Equinox_Fetch --start 2007,01,01 --end 2017,01,01 --index 'D:\Downloads\Project_Atlas\data\SP500-List.csv' --save_dir 'D:\Downloads\Project_Atlas\data' --source yahoo --workers 4 --delay 10 --retries 30 --encoding_in cp1252 --encoding_out utf8
-
-Example usage by entering individual set of stock symbols (On Windows): D:\Downloads\Project_Atlas> ./Equinox_Fetch --start 2007,01,01 --end 2017,01,01 --stocks AMD AAPL GOOG INTC MSFT NVDA --save_dir 'D:\Downloads\Project_Atlas\data' --source yahoo --workers 4 --delay 10 --retries 30 --encoding_in cp1252 --encoding_out utf8
+Example usage by entering individual set of stock symbols (On Linux): info@moad:~/Equinox$ ./Equinox_Fetch --start 2007,01,01 --end 2017,01,01 --stocks AMD AAPL GOOG INTC MSFT NVDA --save_dir '/home/info/data' --source yahoo --workers 4 --delay 10 --retries 30 --encoding_in cp1252 --encoding_out utf8
